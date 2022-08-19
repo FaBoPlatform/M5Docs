@@ -13,7 +13,7 @@
     
     
       
-        <title>ライブラリ - FaBo M5 Docs</title>
+        <title>Hello World - FaBo M5 Docs</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#hello-world" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ライブラリ
+              Hello World
             
           </span>
         </div>
@@ -225,6 +225,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../03.library/" class="md-nav__link">
+        ライブラリ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -236,55 +250,10 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ライブラリ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        ライブラリ
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ライブラリのインストール
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04.hello/" class="md-nav__link">
         Hello World
       </a>
+      
     </li>
   
 
@@ -316,21 +285,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ライブラリのインストール
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -343,11 +297,41 @@
                 
 
 
-<h1 id="_1">ライブラリ</h1>
-<h2 id="_2">ライブラリのインストール</h2>
-<p><img alt="" src="../img/mac010.jpg" /></p>
-<p><img alt="" src="../../img/mac008.jpg" /></p>
-<p><img alt="" src="../../img/mac009.jpg" /></p>
+<h1 id="hello-world">Hello World</h1>
+<p><img alt="" src="./img/hello001.jpg" /></p>
+<div class="highlight"><pre><span></span><code>/*
+*******************************************************************************
+* Copyright (c) 2021 by M5Stack
+*                  Equipped with M5Core2 sample source code
+*                          配套  M5Core2 示例源代码
+* Visit for more information: https://docs.m5stack.com/en/core/core2
+* 获取更多资料请访问: https://docs.m5stack.com/zh_CN/core/core2
+*
+* Describe: Hello World
+* Date: 2021/7/21
+*******************************************************************************
+*/
+#include &lt;M5Core2.h&gt;
+
+/* After M5Core2 is started or reset
+the program in the setUp () function will be run, and this part will only be run once.
+在 M5Core2 启动或者复位后，即会开始执行setup()函数中的程序，该部分只会执行一次。 */
+void setup() {
+  M5.begin();  //Init M5Core2.  初始化 M5Core2
+               /* Power chip connected to gpio21, gpio22, I2C device
+                      Set battery charging voltage and current
+                      If used battery, please call this function in your project */
+  M5.Lcd.print(
+      &quot;Hello World&quot;);  // Print text on the screen (string) 在屏幕上打印文本(字符串)
+}
+
+/* After the program in setup() runs, it runs the program in loop()
+The loop() function is an infinite loop in which the program runs repeatedly
+在setup()函数中的程序执行完后，会接着执行loop()函数中的程序
+loop()函数是一个死循环，其中的程序会不断的重复运行 */
+void loop() {}
+</code></pre></div>
+<p><img alt="" src="./img/hello002.jpg" /></p>
 
 
 
@@ -366,7 +350,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../02.arduino/" class="md-footer__link md-footer__link--prev" aria-label="前: Arduino" rel="prev">
+        <a href="../03.library/" class="md-footer__link md-footer__link--prev" aria-label="前: ライブラリ" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -375,26 +359,11 @@
               <span class="md-footer__direction">
                 前
               </span>
-              Arduino
+              ライブラリ
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../04.hello/" class="md-footer__link md-footer__link--next" aria-label="次: Hello World" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                次
-              </span>
-              Hello World
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
